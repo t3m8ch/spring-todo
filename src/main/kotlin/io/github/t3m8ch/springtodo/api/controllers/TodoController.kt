@@ -2,7 +2,7 @@ package io.github.t3m8ch.springtodo.api.controllers
 
 import io.github.t3m8ch.springtodo.api.dto.todo.CreateUpdateTodoDTO
 import io.github.t3m8ch.springtodo.api.dto.todo.TodoOutDTO
-import io.github.t3m8ch.springtodo.db.dao.exceptions.TodoNotFoundException
+import io.github.t3m8ch.springtodo.db.exceptions.TodoNotFoundException
 import io.github.t3m8ch.springtodo.db.dao.interfaces.TodoDAO
 import io.github.t3m8ch.springtodo.db.entities.TodoEntity
 import org.springframework.http.HttpStatus

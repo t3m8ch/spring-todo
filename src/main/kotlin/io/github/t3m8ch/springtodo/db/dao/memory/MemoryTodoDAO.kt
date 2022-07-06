@@ -1,6 +1,6 @@
 package io.github.t3m8ch.springtodo.db.dao.memory
 
-import io.github.t3m8ch.springtodo.db.dao.exceptions.TodoNotFoundException
+import io.github.t3m8ch.springtodo.db.exceptions.TodoNotFoundException
 import io.github.t3m8ch.springtodo.db.dao.interfaces.TodoDAO
 import io.github.t3m8ch.springtodo.db.entities.TodoEntity
 
