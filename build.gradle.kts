@@ -3,22 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "2.7.1"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    id("org.springdoc.openapi-gradle-plugin") version "1.3.4"
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
-}
-
-openApi {
-    apiDocsUrl.set("http://localhost:8080/api/docs")
-    outputDir.set(file("$buildDir/docs"))
-    outputFileName.set("swagger.json")
-    waitTimeInSeconds.set(10)
-    groupedApiMappings.set(
-        mapOf(
-            "http://localhost:8080/v3/api-docs/groupA" to "swagger-groupA.json",
-            "http://localhost:8080/v3/api-docs/groupB" to "swagger-groupB.json"
-        )
-    )
 }
 
 group = "io.github.t3m8ch"
@@ -34,7 +20,6 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("io.swagger.core.v3:swagger-annotations:2.2.1")
     implementation("org.springdoc:springdoc-openapi-ui:1.6.9")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
